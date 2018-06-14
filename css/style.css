@@ -138,3 +138,57 @@ div.contactme {
 	background: linear-gradient(#00E640,#4ECDC4);
 	display: none;
 }
+
+div#loader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+/	display: none;
+	z-index: 99999;
+}
+div#myNameCode {
+	text-align: center;
+	font-size: 48px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-226px , -48px);
+	letter-spacing: 5px;
+	font-weight: 300;
+	color: #22A7F0;
+	width: 507px;
+}
+div#myNameCode span {
+	font-weight: 400;
+	color: #C0392B;
+	display: inline-block;
+}
+div#myNameCode span.left_code {
+	animation: loader_l 5s;
+}
+div#myNameCode span.right_code {
+	animation: loader_r 5s;
+}
+@keyframes loader_l {
+	33.3% { transform: translateY(40px); }
+	66.6% { transform: translateY(-40px); }
+	100% { transform: translateY(0); }
+}
+@keyframes loader_r {
+	33.3% { transform: translateY(-40px); }
+	66.6% { transform: translateY(40px); }
+	100% { transform: translateY(0); }
+}
+div#loaderStick {
+	width: 0px;
+	height: 2px;
+	background: #96281B;
+	margin: 10px auto;
+	animation: l_stick 1s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+}
+@keyframes l_stick {
+	100% { width: 100%; }
+}
