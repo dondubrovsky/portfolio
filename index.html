@@ -10,7 +10,17 @@
 	<title></title>
 </head>
 <body>
+	
+	<div id="loader">
+		
+		<div id="myNameCode">
 
+			<span class="left_code"><</span> Luka Kupunia <span class="right_code">/></span>
+			<div id="loaderStick"></div>
+
+		</div>
+
+	</div>
 
 	<div id="mainBox">
 		<div id="myImg"></div>
@@ -31,6 +41,16 @@
 
 
 <script type="text/javascript">
+	
+	$(function(){
+	
+		setTimeout(function() {  
+
+			$('#loader').fadeToggle(500);
+
+		}, 6300);
+
+	});
 	
 	$('.myp').on('click' , function(){
 
