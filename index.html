@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+
+
+	<div id="mainBox">
+		<div id="myImg"></div>
+		<div class="circle n1" data-point='aboutme'>
+			<div class="myp about">ABOUT</div>
+		</div>
+		<div class="circle n2" data-point='workme'>
+			<div class="myp work">WORK</div>
+		</div>
+		<div class="circle n3" data-point='contactme'>
+			<div class="myp contact">CONTACT</div>
+		</div>
+	</div>
+		<div class="contactme"></div>
+		<div class="aboutme"></div>
+		<div class="workme"></div>
+		
+
+
+<script type="text/javascript">
+	
+	$('.myp').on('click' , function(){
+
+		var x = $(this).parent().attr('data-point');
+		var y = $('body');
+		var z = '.' + x;
+		var p = y.find(z).fadeIn(500);
+		y.css({ overflowY : 'hidden' });
+
+		p.on('click' , function(){
+
+			$(this).fadeOut(500);
+			y.css({ overflowY : 'scroll' });
+
+		})
+
+	});
+
+</script>
+
+</body>
+</html>

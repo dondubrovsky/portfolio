@@ -1,0 +1,140 @@
+body {
+	margin: 0;
+	overflow-y: scroll;
+	background: url(../img/wall2.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+div#mainBox {
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	position: absolute;
+	top: calc(50% - 300px);
+	left: calc(50% - 300px);
+	border-radius: 50%;
+}
+div#myImg {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	background: url(../img/me.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	box-shadow: 0 0 50px white;
+}
+div.circle {
+	position: absolute;
+	border-radius: 50%;
+}
+div.n1 {
+	width: 450px;
+	height: 450px;
+	top: 75px;
+	left: 75px;
+	border: 1px solid grey;
+	z-index: 99;
+	animation: circle1 20s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+div.n2 {
+	width: 600px;
+	height: 600px;
+	top: 0px;
+	left: 0px;
+	border: 1px solid grey;
+	z-index: 98;
+	animation: circle1 25s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-delay: 3s;
+}
+div.n3 {
+	width: 750px;
+	height: 750px;
+	top: -75px;
+	left: -75px;
+	border: 1px solid grey;
+	z-index: 96;
+	animation: circle1 30s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-delay: 6s;
+}
+div.myp {
+	position: absolute;
+	font-size: 24px;
+	border-radius: 50%;
+	padding: 10px;
+	font-weight: 300;
+	color: white;
+	user-select: none;
+	cursor: pointer;
+}
+div.about {
+	padding: 37px 10px;
+	left: 10px;
+	top: 20px;
+	animation: circle2 20s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	background: linear-gradient(#F03434,#96281B);
+}
+div.work {
+	padding: 33px 10px;
+	left: 62px;
+	top: 20px;
+	animation: circle2 25s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-delay: 3s;
+	background: linear-gradient(#663399,#947CB0);
+}
+div.contact {
+	padding: 50px 10px;
+	left: 68px;
+	top: 20px;
+	animation: circle2 30s linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-delay: 6s;
+	background: linear-gradient(#00E640,#4ECDC4);
+}
+@keyframes circle1 {
+	100% { transform: rotate(360deg); }
+}
+@keyframes circle2 {
+	100% { transform: rotate(-360deg); }
+}
+div.aboutme {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+	background: linear-gradient(#F03434,#96281B);
+	display: none;
+}
+div.workme {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+	background: linear-gradient(#663399,#947CB0);
+	display: none;
+}
+div.contactme {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+	background: linear-gradient(#00E640,#4ECDC4);
+	display: none;
+}
